@@ -12,40 +12,27 @@ const heroSlides = [
     title: "건강한 삶을 위한",
     subtitle: "최고의 의료서비스",
     description: "해동병원은 환자 중심의 진료와 최신 의료 기술로 지역사회의 건강을 책임지는 종합병원입니다.",
-    image: "/modern-hospital-exterior.png",
+    image: "/main1.jpg",
     badge: "신뢰받는 의료진",
     primaryButton: "진료 예약하기",
-    secondaryButton: "병원 둘러보기",
   },
   {
     id: 2,
     title: "첨단 의료장비로",
     subtitle: "정확한 진단과 치료",
-    description: "최신 MRI, CT 장비와 현대식 수술실을 갖춘 해동병원에서 안전하고 정확한 의료서비스를 받으세요.",
-    image: "/hero-medical-equipment.png",
+    description: "안전하고 정확한 의료서비스를 받으세요.",
+    image: "/main3.jpg",
     badge: "최신 의료장비",
     primaryButton: "시설 둘러보기",
-    secondaryButton: "장비 소개",
   },
   {
     id: 3,
-    title: "24시간 응급의료",
-    subtitle: "언제나 함께합니다",
-    description: "응급상황에서도 신속하고 전문적인 의료진이 24시간 대기하여 환자의 생명을 보호합니다.",
-    image: "/hero-emergency-room.png",
-    badge: "24시간 응급실",
-    primaryButton: "응급실 안내",
-    secondaryButton: "응급연락처",
-  },
-  {
-    id: 4,
-    title: "전문의료진과 함께",
-    subtitle: "건강한 미래를 설계",
-    description: "각 분야 전문의와 숙련된 의료진이 환자 개개인에게 맞춤형 치료 계획을 제공합니다.",
-    image: "/hero-medical-team.png",
-    badge: "전문 의료진",
-    primaryButton: "의료진 소개",
-    secondaryButton: "진료과 안내",
+    title: "편안하고 안전한",
+    subtitle: "치료 환경",
+    description: "깨끗하고 쾌적한 치료실에서 편안한 마음으로 치료받을 수 있는 최적의 환경을 제공합니다.",
+    image: "/main2.jpg",
+    badge: "편안한 치료실",
+    primaryButton: "치료실 둘러보기",
   },
 ]
 
@@ -124,13 +111,6 @@ export default function HeroSlider() {
               >
                 {currentSlideData.primaryButton}
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="transition-all duration-300 bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm text-lg px-8 py-4 h-auto"
-              >
-                {currentSlideData.secondaryButton}
-              </Button>
             </div>
 
             {/* Slide Controls */}
@@ -171,8 +151,8 @@ export default function HeroSlider() {
         </div>
       </div>
 
-      {/* Floating Stats Card */}
-      <div className="absolute bottom-8 right-8 bg-white/95 backdrop-blur-sm p-6 rounded-xl shadow-lg transition-all duration-500 hidden lg:block">
+      Floating Stats Card
+      {/* <div className="absolute bottom-8 right-8 bg-white/95 backdrop-blur-sm p-6 rounded-xl shadow-lg transition-all duration-500 hidden lg:block">
         <div className="flex items-center space-x-3">
           <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
             <div className="w-6 h-6 text-green-600">
@@ -197,7 +177,7 @@ export default function HeroSlider() {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Progress Bar */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20">

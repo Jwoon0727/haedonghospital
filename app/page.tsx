@@ -101,7 +101,7 @@ export default function HaedongHospital() {
               <div className="group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="relative h-64 bg-gradient-to-br from-orange-100 to-orange-200">
                   <Image
-                    src="/manual-therapy.png"
+                    src="/도수수.avif"
                     alt="도수치료안내"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -163,7 +163,7 @@ export default function HaedongHospital() {
               <div className="group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="relative h-64 bg-gradient-to-br from-blue-100 to-blue-200">
                   <Image
-                    src="/womens-health.png"
+                    src="/여성질환.webp"
                     alt="여성질환/난임클리닉"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -225,7 +225,7 @@ export default function HaedongHospital() {
               <div className="group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="relative h-64 bg-gradient-to-br from-green-100 to-green-200">
                   <Image
-                    src="/industrial-accident.png"
+                    src="/의사.png"
                     alt="근로복지공단 산재지정병원"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -300,7 +300,25 @@ export default function HaedongHospital() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1">
+            <div className="order-1 lg:order-1">
+              <div className="relative">
+                <Image
+                  src="/person.jpg"
+                  alt="김해동 병원장"
+                  width={500}
+                  height={600}
+                  className="rounded-2xl shadow-2xl"
+                />
+                <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-blue-600">25+</div>
+                    <div className="text-sm text-gray-600">년 경력</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="order-2 lg:order-2">
               <div className="space-y-6">
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">이상돈 병원장</h3>
@@ -374,24 +392,6 @@ export default function HaedongHospital() {
                   <Badge variant="secondary" className="bg-purple-100 text-purple-800">
                     건강검진
                   </Badge>
-                </div>
-              </div>
-            </div>
-
-            <div className="order-1 lg:order-2">
-              <div className="relative">
-                <Image
-                  src="/hospital-director.png"
-                  alt="김해동 병원장"
-                  width={500}
-                  height={600}
-                  className="rounded-2xl shadow-2xl"
-                />
-                <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-600">25+</div>
-                    <div className="text-sm text-gray-600">년 경력</div>
-                  </div>
                 </div>
               </div>
             </div>
