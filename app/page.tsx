@@ -9,6 +9,18 @@ import HeroSliderComponent from "@/components/hero-slider"
 import AnimatedServiceCard from "@/components/animated-service-card"
 import HeaderComponent from "@/components/header"
 import ConsultationFormComponent from "@/components/consultation-form"
+import dynamic from "next/dynamic"
+
+// 카카오맵 컴포넌트를 동적으로 불러오기
+const KakaoMap = dynamic(() => import('@/utils/kakaomap'), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-full flex items-center justify-center bg-gray-800">
+      <p className="text-white">지도를 불러오는 중...</p>
+    </div>
+  )
+})
+
 
 export default function HaedongHospital() {
   return (
@@ -555,11 +567,22 @@ export default function HaedongHospital() {
               </div>
             </div>
 
-            <div className="bg-gray-100 rounded-xl p-8 h-96 flex items-center justify-center">
-              <div className="text-center text-gray-500">
-                <MapPin className="w-16 h-16 mx-auto mb-4" />
-                <p className="text-lg font-medium">지도 영역</p>
-                <p className="text-sm">실제 구현 시 Google Maps 또는 네이버 지도 API 연동</p>
+            <div className="bg-gray-100 rounded-xl p-8 h-96 flex items-center justify-center relative">
+              <KakaoMap />
+              
+              {/* 길찾기 버튼 - 지도 하단에 오버레이 */}
+              <div className="absolute bottom-95 left-1/2 transform -translate-x-1/2 z-10">
+                <Button
+                  onClick={() => {
+                    // 카카오맵 길찾기 URL (서울시청 좌표 기준)
+                    const kakaoMapUrl = "https://map.kakao.com/link/to/해동한방병원,37.5665,126.9780"
+                    window.open(kakaoMapUrl, '_blank')
+                  }}
+                  className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-lg shadow-lg flex items-center space-x-2 text-sm font-medium"
+                >
+                  <MapPin className="w-4 h-4" />
+                  <span>카카오맵 길찾기</span>
+                </Button>
               </div>
             </div>
           </div>
