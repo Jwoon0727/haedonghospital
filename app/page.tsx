@@ -374,7 +374,14 @@ export default function HaedongHospital() {
                     </li>
                   </ul>
                 </div>
-
+                <div className="flex flex-wrap gap-3">
+                  <Badge variant="secondary" className="bg-blue-100 text-blue-800 px-4 py-2 text-sm font-medium rounded-full">
+                    한국&미국 한의 라인센스 보유
+                  </Badge>
+                  <Badge variant="secondary" className="bg-green-100 text-green-800 px-4 py-2 text-sm font-medium rounded-full">
+                    선친의 대를 이은 한의사
+                  </Badge>
+                </div>
               
               </div>
             </div>
@@ -434,7 +441,7 @@ export default function HaedongHospital() {
               </div>
             </div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              해동한방병원의 특설진료를 확인해보세요.
+              해동한방병원의 특설진료를 확인해보세요
             </p>
           </div>
 
@@ -739,130 +746,88 @@ export default function HaedongHospital() {
               <p className="text-gray-400 mb-4">건강한 삶을 위한 최고의 의료서비스.</p>
             </div>
 
+            {/* 진료시간 */}
             <div>
               <h4 className="font-semibold mb-6 text-lg">진료시간</h4>
               <div className="space-y-3">
                 {/* 평일 */}
-                <div className="bg-gray-800/50 backdrop-blur-sm p-4 rounded-xl border border-gray-700/30">
+                <div>
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Clock className="w-4 h-4 text-blue-400" />
-                      </div>
-                      <span className="text-blue-300 font-medium">평일</span>
-                    </div>
+                    <span className="text-white-700 font-medium">평일</span>
                     <div className="text-right">
-                      <p className="text-gray-300 font-semibold">오전 9:00 ~ 오후 8:00</p>
-                    
+                      <p className="text-white-800 font-semibold">오전 9:00 ~ 오후 8:00</p>
                     </div>
                   </div>
                 </div>
 
                 {/* 점심시간 */}
-                <div className="bg-gray-800/50 backdrop-blur-sm p-4 rounded-xl border border-gray-700/30">
+                <div>
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-8 h-8 bg-orange-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <div className="w-4 h-4 bg-orange-400 rounded-full"></div>
-                      </div>
-                      <span className="text-orange-300 font-medium">점심시간</span>
-                    </div>
+                    <span className="text-white-700 font-medium">점심시간</span>
                     <div className="text-right">
-                      <p className="text-gray-300 font-semibold">오후 12:30 ~ 오후 1:30</p>
-                    
+                      <p className="text-white-800 font-semibold">오후 12:30 ~ 오후 1:30</p>
                     </div>
                   </div>
                 </div>
 
                 {/* 토·공휴일 */}
-                <div className="bg-gray-800/50 backdrop-blur-sm p-4 rounded-xl border border-gray-700/30">
+                <div>
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <div className="w-4 h-4 bg-green-400 rounded-full"></div>
-                      </div>
-                      <span className="text-green-300 font-medium">토·공휴일</span>
-                    </div>
-                    <div className="text-right">
-                      <p className="text-gray-300 font-semibold">오전 9:00 ~ 오후 3:00</p>
-                   
+                    <span className="text-white-700 font-medium">토·공휴일</span>
+                    <div>
+                      <p className="text-white-800 font-semibold">오전 9:00 ~ 오후 3:00</p>
                     </div>
                   </div>
                 </div>
 
                 {/* 일요일 */}
-                <div className="bg-gray-800/50 backdrop-blur-sm p-4 rounded-xl border border-gray-700/30">
+                <div>
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <div className="w-4 h-4 bg-purple-400 rounded-full"></div>
-                      </div>
-                      <span className="text-purple-300 font-medium">일요일</span>
-                    </div>
+                    <span className="text-white-700 font-medium">일요일</span>
                     <div className="text-right">
-                      <p className="text-gray-300 font-semibold">오후 1:00 ~ 오후 6:00</p>
-                     
+                      <p className="text-white-800 font-semibold">오후 1:00 ~ 오후 6:00</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
+            {/* 병원정보 */}
             <div>
-              <h4 className="font-semibold mb-4 text-lg">병원정보</h4>
+              <h4 className="pl-16 font-semibold mb-4 text-lg">병원정보</h4>
               <div className="space-y-3">
                 {/* 주소 */}
-                <div className="bg-gray-800/50 backdrop-blur-sm p-3 rounded-xl border border-gray-700/30">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-3 h-3 text-blue-400" />
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-blue-300 font-medium text-xs mb-1">주소</p>
-                      <p className="text-gray-300 text-xs leading-relaxed">
-                        경기 의정부시 천보로 56 해동2타워 10층<br />
-                        <span className="text-gray-400 text-xs">(지번) 민락동 805-3</span>
-                      </p>
-                    </div>
+                <div className="pl-17">
+                  <div className="flex-1">
+                    <p className="text-white-600 font-medium text-xs mb-1">주소 : </p>
+                    <p className="text-white-700 text-xs leading-relaxed">
+                      경기 의정부시 천보로 56 해동2타워 10층<br />
+                      <span className="text-white-500 text-xs">(지번) 민락동 805-3</span>
+                    </p>
                   </div>
                 </div>
 
                 {/* 사업자번호 */}
-                <div className="bg-gray-800/50 backdrop-blur-sm p-3 rounded-xl border border-gray-700/30">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-6 h-6 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-green-300 font-medium text-xs mb-1">사업자 번호</p>
-                      <p className="text-gray-300 text-xs font-mono">666-96-00628</p>
-                    </div>
+                <div className="pl-17">
+                  <div className="flex-1">
+                    <p className="text-white-600 font-medium text-xs mb-1">사업자 번호 : 666-96-00628</p>
+                    
                   </div>
                 </div>
 
                 {/* 대표원장 */}
-                <div className="bg-gray-800/50 backdrop-blur-sm p-3 rounded-xl border border-gray-700/30">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-6 h-6 bg-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <User className="w-3 h-3 text-purple-400" />
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-purple-300 font-medium text-xs mb-1">대표원장</p>
-                      <p className="text-gray-300 text-xs">이상돈</p>
-                    </div>
+                <div className="pl-17">
+                  <div className="flex-1">
+                    <p className="text-white-600 font-medium text-xs mb-1">대표원장 : 이상돈</p>
+                    
                   </div>
                 </div>
 
                 {/* 대표전화 */}
-                <div className="bg-gray-800/50 backdrop-blur-sm p-3 rounded-xl border border-gray-700/30">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-6 h-6 bg-amber-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-3 h-3 text-amber-400" />
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-amber-300 font-medium text-xs mb-1">대표전화</p>
-                      <p className="text-gray-300 text-xs font-semibold">031-823-3650</p>
-                    </div>
+                <div className="pl-17">
+                  <div className="flex-1">
+                    <p className="text-white-600 font-medium text-xs mb-1">대표전화 : 031-823-3650</p>
+                    
                   </div>
                 </div>
               </div>

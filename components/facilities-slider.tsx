@@ -36,14 +36,14 @@ const facilities = [
     description:
       "물리치료실",
     image: "/물리치료.jpg",
-    features: ["고화질 내시경", "무통 내시경", "당일 결과 확인"],
+    features: ["당일 결과 확인"],
   },
   {
     id: 5,
-    title: "입원실",
-    description: "입원실",
+    title: "병실",
+    description: "병실",
     image: "/입원실.jpg",
-    features: ["입원실"],
+    features: ["병실마다 샤워실과 화장실 완비.", "샤워실 화장실 완비된 1인실 운영"],
   },
     {
       id: 6,
