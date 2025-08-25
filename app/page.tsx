@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image"
-import { Phone, MapPin, Clock, Mail, Heart, Trophy, Medal, Award, Star, Target, Users, Home } from "lucide-react"
+import { Phone, MapPin, Clock, Mail, Heart, Trophy, Medal, Award, Star, Target, Users, Home, User, Bus, Train } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import FAQSectionComponent from "@/components/faq-section"
@@ -31,29 +31,7 @@ export default function HaedongHospital() {
       {/* Hero Section */}
       <HeroSliderComponent />
 
-      {/* Stats Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">25+</div>
-              <p className="text-gray-600">년간 운영</p>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">50+</div>
-              <p className="text-gray-600">전문의료진</p>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">15</div>
-              <p className="text-gray-600">진료과목</p>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">100K+</div>
-              <p className="text-gray-600">연간 환자수</p>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* About Section */}
       <section
@@ -102,7 +80,7 @@ export default function HaedongHospital() {
 
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-1 bg-gradient-to-r from-blue-600 to-amber-600 rounded-full"></div>
-                  <span className="text-gray-500 font-medium">25년간의 신뢰와 경험</span>
+                  <span className="text-gray-500 font-medium">신뢰와 경험</span>
                 </div>
               </div>
             </div>
@@ -334,11 +312,14 @@ export default function HaedongHospital() {
               <div className="space-y-6">
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">이상돈 병원장</h3>
-                  <p className="text-lg text-blue-600 font-medium mb-4">... · 병원장</p>
                 </div>
 
                 <div className="prose prose-lg text-gray-600">
-                  <p className="leading-relaxed">안녕하십니까. 해동병원 병원장 이상돈입니다.</p>
+                  <p className="leading-relaxed text-xl font-bold">안녕하세요.</p>
+                  <p className="leading-relaxed px-3 py-1 rounded text-xl font-bold">
+                    의정부 민락2지구에 해동한방병원을<br />
+                    개원하게 된 병원장 이상돈입니다.
+                  </p>
                   <p className="leading-relaxed">
                   저희 해동한방병원은 다년간의 다양한 경험과 노하우를 가지고
 의정부지역에서 새로운 출발을 하려 합니다.
@@ -394,17 +375,7 @@ export default function HaedongHospital() {
                   </ul>
                 </div>
 
-                <div className="flex flex-wrap gap-3">
-                  <Badge variant="secondary" className="bg-blue-100 text-blue-800">
-                    소화기내과
-                  </Badge>
-                  <Badge variant="secondary" className="bg-green-100 text-green-800">
-                    내시경
-                  </Badge>
-                  <Badge variant="secondary" className="bg-purple-100 text-purple-800">
-                    건강검진
-                  </Badge>
-                </div>
+              
               </div>
             </div>
           </div>
@@ -458,12 +429,12 @@ export default function HaedongHospital() {
             <div className="relative inline-block mb-6">
               <div className="absolute inset-0 bg-amber-100/50 rounded-2xl blur-xl transform scale-110"></div>
               <div className="relative bg-white/60 backdrop-blur-sm px-8 py-4 rounded-2xl shadow-lg">
-                <h2 className="text-3xl font-bold text-gray-900 mb-2">주요 진료과목</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-2">특설 진료과목</h2>
                 <div className="w-16 h-1 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full mx-auto"></div>
               </div>
             </div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              전문화된 의료진과 최신 장비로 최고의 진료서비스를 제공합니다.
+              해동한방병원의 특설진료를 확인해보세요.
             </p>
           </div>
 
@@ -526,63 +497,228 @@ export default function HaedongHospital() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
+            {/* Left Side - Contact Info & Transportation */}
             <div className="space-y-8">
-              <div className="flex items-start space-x-4">
-                <MapPin className="w-6 h-6 text-blue-600 mt-1" />
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">주소</h3>
-                  <p className="text-gray-600">서울특별시 강남구 테헤란로 123</p>
-                  <p className="text-gray-600">해동빌딩 1-5층</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <Phone className="w-6 h-6 text-blue-600 mt-1" />
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">전화번호</h3>
-                  <p className="text-gray-600">대표전화: 02-1234-5678</p>
-                  <p className="text-gray-600">응급실: 02-1234-5679</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <Clock className="w-6 h-6 text-blue-600 mt-1" />
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">진료시간</h3>
-                  <div className="space-y-1 text-gray-600">
-                    <p>평일: 오전 9:00 - 오후 6:00</p>
-                    <p>토요일: 오전 9:00 - 오후 1:00</p>
-                    <p>일요일/공휴일: 휴진</p>
-                    <p className="text-red-600 font-medium">응급실: 24시간 운영</p>
+              {/* Address */}
+              <div className="p-6 rounded-xl border border-gray-200">
+                <div className="flex items-start space-x-4">
+                  <div className="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 h-5 text-blue-600" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-gray-900 mb-3 text-lg">주소</h3>
+                    <p className="text-gray-700 font-medium">경기 의정부시 천보로 56</p>
+                    <p className="text-gray-700">해동2타워 10층 1001~1005호</p>
+                    <p className="text-gray-500 text-sm mt-1">(지번) 민락동 805-3</p>
                   </div>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
-                <Mail className="w-6 h-6 text-blue-600 mt-1" />
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">이메일</h3>
-                  <p className="text-gray-600">info@haedonghospital.com</p>
+              {/* Transportation */}
+              <div className="space-y-4">
+                {/* Bus */}
+                <div className="p-5 rounded-xl border border-gray-200">
+                  <div className="flex items-center space-x-3 mb-3">
+                    <div className="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center">
+                      <Bus className="w-4 h-4 text-green-600" />
+                    </div>
+                    <h4 className="text-green-700 font-semibold">버스</h4>
+                  </div>
+                  <p className="text-gray-700 text-sm mb-3">
+                    산들마을 1단지, 2단지 하차후 정면 횡단보도 건넌 후 도보로 2분
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">35, 3</span>
+                    <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">206, 205-1</span>
+                  </div>
+                </div>
+
+                {/* Subway */}
+                <div className="p-5 rounded-xl border border-gray-200">
+                  <div className="flex items-center space-x-3 mb-3">
+                    <div className="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                      <Train className="w-4 h-4 text-blue-600" />
+                    </div>
+                    <h4 className="text-blue-700 font-semibold">지하철</h4>
+                  </div>
+                  <p className="text-gray-700 text-sm mb-2">1호선 의정부역</p>
+                  <p className="text-gray-700 text-sm">
+                    하차 후 <span className="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">35, 3번</span> 버스 탑승
+                  </p>
+                </div>
+              </div>
+
+              {/* Contact */}
+              <div className="p-6 rounded-xl border border-gray-200">
+                <div className="flex items-start space-x-4">
+                  <div className="w-10 h-10 bg-amber-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-5 h-5 text-amber-600" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-gray-900 mb-3 text-lg">연락처</h3>
+                    <p className="text-gray-700 font-medium">대표전화: 031-823-3650</p>
+                    <p className="text-gray-500 text-sm mt-1">평일 09:00 - 20:00</p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gray-100 rounded-xl p-8 h-96 flex items-center justify-center relative">
-              <KakaoMap />
-              
-              {/* 길찾기 버튼 - 지도 하단에 오버레이 */}
-              <div className="absolute bottom-95 left-1/2 transform -translate-x-1/2 z-10">
-                <Button
-                  onClick={() => {
-                    // 카카오맵 길찾기 URL (서울시청 좌표 기준)
-                    const kakaoMapUrl = "https://map.kakao.com/link/to/해동한방병원,37.5665,126.9780"
-                    window.open(kakaoMapUrl, '_blank')
-                  }}
-                  className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-lg shadow-lg flex items-center space-x-2 text-sm font-medium"
-                >
-                  <MapPin className="w-4 h-4" />
-                  <span>카카오맵 길찾기</span>
-                </Button>
+            {/* Right Side - Map & Hours */}
+            <div className="space-y-8">
+              {/* Map */}
+              <div className="bg-gray-100 rounded-xl p-8 h-96 flex items-center justify-center relative">
+                <KakaoMap />
+                
+                {/* 길찾기 버튼 - 지도 하단에 오버레이 */}
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10">
+                  <Button
+                    onClick={() => {
+                      // 카카오맵 길찾기 URL (의정부 좌표 기준)
+                      const kakaoMapUrl = "https://map.kakao.com/link/to/해동한방병원,37.74483,127.09529"
+                      window.open(kakaoMapUrl, '_blank')
+                    }}
+                    className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-lg shadow-lg flex items-center space-x-2 text-sm font-medium"
+                  >
+                    <MapPin className="w-4 h-4" />
+                    <span>카카오맵 길찾기</span>
+                  </Button>
+                </div>
+              </div>
+
+              {/* Consultation Hours */}
+              <div className="p-6 rounded-xl border border-gray-200">
+                
+                {/* Status Indicator */}
+                <div className="mb-4 text-center">
+                  {(() => {
+                    const now = new Date()
+                    const day = now.getDay() // 0: 일요일, 1: 월요일, ..., 6: 토요일
+                    const hour = now.getHours()
+                    const minute = now.getMinutes()
+                    const currentTime = hour * 100 + minute
+                    
+                    let isOpen = false
+                    let statusText = ""
+                    let statusColor = ""
+                    
+                    if (day === 0) { // 일요일
+                      isOpen = currentTime >= 1300 && currentTime <= 1800
+                      statusText = isOpen ? "진료중" : "진료종료"
+                      statusColor = isOpen ? "text-green-600" : "text-red-600"
+                    } else if (day === 6) { // 토요일
+                      isOpen = currentTime >= 900 && currentTime <= 1500
+                      statusText = isOpen ? "진료중" : "진료종료"
+                      statusColor = isOpen ? "text-green-600" : "text-red-600"
+                    } else if (day >= 1 && day <= 5) { // 평일
+                      isOpen = currentTime >= 900 && currentTime <= 2000
+                      statusText = isOpen ? "진료중" : "진료종료"
+                      statusColor = isOpen ? "text-green-600" : "text-red-600"
+                    } else {
+                      statusText = "휴진"
+                      statusColor = "text-gray-500"
+                    }
+                    
+                    return (
+                      <div className={`inline-flex items-center space-x-2 px-4 py-2 rounded-full ${isOpen ? 'bg-green-100' : 'bg-red-100'}`}>
+                        <div className={`w-3 h-3 rounded-full ${isOpen ? 'bg-green-500' : 'bg-red-500'}`}></div>
+                        <span className={`font-semibold ${statusColor}`}>{statusText}</span>
+                      </div>
+                    )
+                  })()}
+                </div>
+
+                {/* Hours Table */}
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="border-b border-gray-200">
+                        <th className="text-left py-2 font-medium text-gray-700">요일</th>
+                        <th className="text-center py-2 font-medium text-gray-700">OPEN</th>
+                        <th className="text-center py-2 font-medium text-gray-700">CLOSE</th>
+                        <th className="text-center py-2 font-medium text-gray-700">진료시간</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-100">
+                      <tr className={`py-3 hover:bg-gray-50 ${(() => {
+                        const today = new Date().getDay()
+                        return today === 1 ? 'bg-blue-50 border-l-4 border-l-blue-500' : ''
+                      })()}`}>
+                        <td className="py-3 font-medium text-gray-800">월요일</td>
+                        <td className="text-center text-gray-600">09:00</td>
+                        <td className="text-center text-red-600 font-semibold">20:00</td>
+                        <td className="text-center text-gray-500 text-xs">11시간</td>
+                      </tr>
+                      <tr className={`py-3 hover:bg-gray-50 ${(() => {
+                        const today = new Date().getDay()
+                        return today === 2 ? 'bg-blue-50 border-l-4 border-l-blue-500' : ''
+                      })()}`}>
+                        <td className="py-3 font-medium text-gray-800">화요일</td>
+                        <td className="text-center text-gray-600">09:00</td>
+                        <td className="text-center text-red-600 font-semibold">20:00</td>
+                        <td className="text-center text-gray-500 text-xs">11시간</td>
+                      </tr>
+                      <tr className={`py-3 hover:bg-gray-50 ${(() => {
+                        const today = new Date().getDay()
+                        return today === 3 ? 'bg-blue-50 border-l-4 border-l-blue-500' : ''
+                      })()}`}>
+                        <td className="py-3 font-medium text-gray-800">수요일</td>
+                        <td className="text-center text-gray-600">09:00</td>
+                        <td className="text-center text-red-600 font-semibold">20:00</td>
+                        <td className="text-center text-gray-500 text-xs">11시간</td>
+                      </tr>
+                      <tr className={`py-3 hover:bg-gray-50 ${(() => {
+                        const today = new Date().getDay()
+                        return today === 4 ? 'bg-blue-50 border-l-4 border-l-blue-500' : ''
+                      })()}`}>
+                        <td className="py-3 font-medium text-gray-800">목요일</td>
+                        <td className="text-center text-gray-600">09:00</td>
+                        <td className="text-center text-red-600 font-semibold">20:00</td>
+                        <td className="text-center text-gray-500 text-xs">11시간</td>
+                      </tr>
+                      <tr className={`py-3 hover:bg-gray-50 ${(() => {
+                        const today = new Date().getDay()
+                        return today === 5 ? 'bg-blue-50 border-l-4 border-l-blue-500' : ''
+                      })()}`}>
+                        <td className="py-3 font-medium text-gray-800">금요일</td>
+                        <td className="text-center text-gray-600">09:00</td>
+                        <td className="text-center text-red-600 font-semibold">20:00</td>
+                        <td className="text-center text-gray-500 text-xs">11시간</td>
+                      </tr>
+                      <tr className={`py-3 hover:bg-gray-50 ${(() => {
+                        const today = new Date().getDay()
+                        return today === 6 ? 'bg-blue-50 border-l-4 border-l-blue-500' : ''
+                      })()}`}>
+                        <td className="py-3 font-medium text-gray-800">토요일</td>
+                        <td className="text-center text-gray-600">09:00</td>
+                        <td className="text-center text-red-600 font-semibold">15:00</td>
+                        <td className="text-center text-gray-500 text-xs">6시간</td>
+                      </tr>
+                      <tr className={`py-3 hover:bg-gray-50 ${(() => {
+                        const today = new Date().getDay()
+                        return today === 0 ? 'bg-blue-50 border-l-4 border-l-blue-500' : ''
+                      })()}`}>
+                        <td className="py-3 font-medium text-gray-800">일요일</td>
+                        <td className="text-center text-gray-600">13:00</td>
+                        <td className="text-center text-red-600 font-semibold">18:00</td>
+                        <td className="text-center text-gray-500 text-xs">5시간</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                {/* Special Notes */}
+                <div className="mt-4 p-3 bg-amber-50 rounded-lg border border-amber-200">
+                  <div className="flex items-center space-x-2 text-sm">
+                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                    <span className="text-amber-800 font-medium">점심시간:</span>
+                    <span className="text-amber-700">12:30 - 13:30</span>
+                  </div>
+                  <div className="flex items-center space-x-2 text-sm mt-1">
+                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                    <span className="text-amber-800 font-medium">토·공휴일:</span>
+                    <span className="text-amber-700 font-bold">9:00 ~ 15:00</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -600,45 +736,141 @@ export default function HaedongHospital() {
                 </div>
                 <h3 className="text-xl font-bold">해동한방병원</h3>
               </div>
-              <p className="text-gray-400 mb-4">건강한 삶을 위한 최고의 의료서비스를 제공하는 종합병원입니다.</p>
+              <p className="text-gray-400 mb-4">건강한 삶을 위한 최고의 의료서비스.</p>
             </div>
 
             <div>
-              <h4 className="font-semibold mb-4">빠른 링크</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <a href="#about" className="hover:text-white">
-                    병원소개
-                  </a>
-                </li>
-                <li>
-                  <a href="#services" className="hover:text-white">
-                    진료과목
-                  </a>
-                </li>
-                <li>
-                  <a href="#facilities" className="hover:text-white">
-                    시설안내
-                  </a>
-                </li>
-                <li>
-                  <a href="#contact" className="hover:text-white">
-                    오시는길
-                  </a>
-                </li>
-              </ul>
+              <h4 className="font-semibold mb-6 text-lg">진료시간</h4>
+              <div className="space-y-3">
+                {/* 평일 */}
+                <div className="bg-gray-800/50 backdrop-blur-sm p-4 rounded-xl border border-gray-700/30">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Clock className="w-4 h-4 text-blue-400" />
+                      </div>
+                      <span className="text-blue-300 font-medium">평일</span>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-gray-300 font-semibold">오전 9:00 ~ 오후 8:00</p>
+                    
+                    </div>
+                  </div>
+                </div>
+
+                {/* 점심시간 */}
+                <div className="bg-gray-800/50 backdrop-blur-sm p-4 rounded-xl border border-gray-700/30">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-8 h-8 bg-orange-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div className="w-4 h-4 bg-orange-400 rounded-full"></div>
+                      </div>
+                      <span className="text-orange-300 font-medium">점심시간</span>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-gray-300 font-semibold">오후 12:30 ~ 오후 1:30</p>
+                    
+                    </div>
+                  </div>
+                </div>
+
+                {/* 토·공휴일 */}
+                <div className="bg-gray-800/50 backdrop-blur-sm p-4 rounded-xl border border-gray-700/30">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div className="w-4 h-4 bg-green-400 rounded-full"></div>
+                      </div>
+                      <span className="text-green-300 font-medium">토·공휴일</span>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-gray-300 font-semibold">오전 9:00 ~ 오후 3:00</p>
+                   
+                    </div>
+                  </div>
+                </div>
+
+                {/* 일요일 */}
+                <div className="bg-gray-800/50 backdrop-blur-sm p-4 rounded-xl border border-gray-700/30">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div className="w-4 h-4 bg-purple-400 rounded-full"></div>
+                      </div>
+                      <span className="text-purple-300 font-medium">일요일</span>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-gray-300 font-semibold">오후 1:00 ~ 오후 6:00</p>
+                     
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div>
-              <h4 className="font-semibold mb-4">응급연락처</h4>
-              <p className="text-gray-400 mb-2">응급실: 02-1234-5679</p>
-              <p className="text-gray-400 mb-4">24시간 운영</p>
-            
+              <h4 className="font-semibold mb-4 text-lg">병원정보</h4>
+              <div className="space-y-3">
+                {/* 주소 */}
+                <div className="bg-gray-800/50 backdrop-blur-sm p-3 rounded-xl border border-gray-700/30">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-3 h-3 text-blue-400" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-blue-300 font-medium text-xs mb-1">주소</p>
+                      <p className="text-gray-300 text-xs leading-relaxed">
+                        경기 의정부시 천보로 56 해동2타워 10층<br />
+                        <span className="text-gray-400 text-xs">(지번) 민락동 805-3</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 사업자번호 */}
+                <div className="bg-gray-800/50 backdrop-blur-sm p-3 rounded-xl border border-gray-700/30">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-6 h-6 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-green-300 font-medium text-xs mb-1">사업자 번호</p>
+                      <p className="text-gray-300 text-xs font-mono">666-96-00628</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 대표원장 */}
+                <div className="bg-gray-800/50 backdrop-blur-sm p-3 rounded-xl border border-gray-700/30">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-6 h-6 bg-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <User className="w-3 h-3 text-purple-400" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-purple-300 font-medium text-xs mb-1">대표원장</p>
+                      <p className="text-gray-300 text-xs">이상돈</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 대표전화 */}
+                <div className="bg-gray-800/50 backdrop-blur-sm p-3 rounded-xl border border-gray-700/30">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-6 h-6 bg-amber-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-3 h-3 text-amber-400" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-amber-300 font-medium text-xs mb-1">대표전화</p>
+                      <p className="text-gray-300 text-xs font-semibold">031-823-3650</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 해동병원. All rights reserved.</p>
+            <p>&copy; 2025 해동병원. All rights reserved.</p>
           </div>
         </div>
       </footer>

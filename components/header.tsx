@@ -80,7 +80,10 @@ export default function Header() {
           </nav>
 
           {/* Desktop CTA Button */}
-          <Button className="hidden md:flex bg-blue-600 hover:bg-blue-700 transition-colors duration-200">
+          <Button 
+            onClick={() => window.location.href = 'tel:031-823-3650'}
+            className="hidden md:flex bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+          >
             <Phone className="w-4 h-4 mr-2" />
             예약문의
           </Button>
@@ -110,7 +113,10 @@ export default function Header() {
                 </button>
               ))}
               <div className="px-4 pt-4 border-t border-gray-200">
-                <Button className="w-full bg-blue-600 hover:bg-blue-700 transition-colors duration-200">
+                <Button 
+                  onClick={() => window.location.href = 'tel:031-823-3650'}
+                  className="w-full bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+                >
                   <Phone className="w-4 h-4 mr-2" />
                   예약문의
                 </Button>

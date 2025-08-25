@@ -67,15 +67,11 @@ export default function ConsultationForm() {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <Phone className="w-5 h-5 text-amber-600" />
-                    <span className="text-gray-700 font-medium">대표전화: 02-1234-5678</span>
+                    <span className="text-gray-700 font-medium">대표전화: 031-823-3650</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Clock className="w-5 h-5 text-amber-600" />
                     <span className="text-gray-700 font-medium">진료시간: 평일 09:00 - 18:00</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <MapPin className="w-5 h-5 text-amber-600" />
-                    <span className="text-gray-700 font-medium">응급실: 24시간 운영</span>
                   </div>
                 </div>
 
@@ -97,17 +93,18 @@ export default function ConsultationForm() {
                 <div className="space-y-6">
                   {/* Direct Call Button */}
                   <Button
-                    onClick={() => window.location.href = 'tel:02-1234-5678'}
+                    onClick={() => window.location.href = 'tel:031-823-3650'}
                     className="w-full h-20 bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-white font-semibold text-2xl rounded-xl transition-all duration-300 transform hover:scale-105"
                   >
                     <div className="flex items-center justify-center space-x-4">
                       <Phone className="w-8 h-8" />
-                      <span>02-1234-5678</span>
+                      <span>031-823-3650</span>
                       <ArrowRight className="w-8 h-8" />
                     </div>
                   </Button>
 
-       
+                  {/* 간격 추가 */}
+                  <div className="h-8"></div>
 
                   {/* Notice */}
                   <div className="bg-blue-50 p-4 rounded-xl">
@@ -115,8 +112,6 @@ export default function ConsultationForm() {
                       <strong>전화 상담 안내</strong>
                       <br />
                       • 평일 오전 9시 ~ 오후 6시까지 상담 가능
-                      <br />
-                      • 응급상황 시 24시간 응급실 이용 가능
                       <br />
                       • 상담 시간 외 문의는 다음날 상담 가능
                     </p>
