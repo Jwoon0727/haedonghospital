@@ -52,8 +52,8 @@ export default function Header() {
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="flex items-center space-x-3 hover:opacity-80 transition-opacity"
           > 
-            {/* 이미지 로고 - 크기 조절 */}
-            <div className="relative w-100 h-20">
+                    {/* 이미지 로고 - 크기 조절 */}
+                    <div className="relative w-32 h-12 md:w-48 md:h-16">
               <Image
                 src="/main0.jpg"
                 alt="해동병원 로고"
@@ -80,23 +80,24 @@ export default function Header() {
           </nav>
 
           {/* Desktop CTA Button */}
-          <Button 
+          {/* <Button 
             onClick={() => window.location.href = 'tel:031-823-3650'}
             className="hidden md:flex bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
           >
             <Phone className="w-4 h-4 mr-2" />
             예약문의
-          </Button>
+          </Button> */}
+      {/* Mobile Menu Button */}
+      <Button
+        variant="ghost"
+        size="icon"
+        className="md:hidden h-12 w-12 text-black"
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        aria-label="모바일 메뉴 열기"
+      >
+        {isMobileMenuOpen ? <X className="w-32 h-32" strokeWidth={3} /> : <Menu className="w-32 h-32" strokeWidth={3} />}
+      </Button>
 
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </Button>
         </div>
 
         {/* Mobile Navigation */}

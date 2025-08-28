@@ -74,9 +74,6 @@ export default function HaedongHospital() {
                   </h2>
                 </div>
 
-                <p className="text-xl text-gray-600 leading-relaxed">
-                  전통 한의학과 현대 의학을 결합한 통합 진료로 환자 개개인에게 최적화된 맞춤 치료를 제공합니다.
-                </p>
 
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-1 bg-gradient-to-r from-blue-600 to-amber-600 rounded-full"></div>
@@ -98,40 +95,31 @@ export default function HaedongHospital() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                   <div className="absolute top-6 left-6">
-                    <div className="w-8 h-8 bg-amber-500 rounded-lg flex items-center justify-center mb-3">
-                      <span className="text-white font-bold">#</span>
+                    <div className="inline-flex items-center justify-center bg-indigo-800/100 rounded-lg px-3 py-1.5">
+                      <h2 className="text-white font-bold"># 도수치료</h2>
                     </div>
-                    <h3 className="text-2xl font-bold text-white drop-shadow-lg">도수치료안내</h3>
                   </div>
 
                   {/* Hover overlay with detailed description */}
                   <div className="absolute inset-0 bg-white/95 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-full group-hover:translate-y-0 p-6 flex flex-col justify-center">
                     <div className="space-y-4">
-                      <div className="flex items-center space-x-3 mb-4">
-                        <div className="w-10 h-10 bg-amber-500 rounded-lg flex items-center justify-center">
-                          <span className="text-white font-bold">🤲</span>
-                        </div>
-                        <h4 className="font-bold text-amber-600 text-xl">도수치료 전문센터</h4>
-                      </div>
+                 
 
-                      <p className="text-gray-700 text-sm leading-relaxed mb-3">
-                        전문 물리치료사의 손을 이용한 1:1 맞춤 치료로 근골격계 질환을 근본적으로 개선합니다.
-                      </p>
-
+                     
                       <div className="space-y-2">
-                        <div className="flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
-                          <span className="text-sm text-gray-600">척추 측만증, 거북목 교정</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
-                          <span className="text-sm text-gray-600">어깨 충돌증후군 치료</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
-                          <span className="text-sm text-gray-600">골반 불균형 교정</span>
-                        </div>
-                      </div>
+    <div className="flex items-center space-x-2">
+      <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
+      <span className="text-lg text-gray-600">척추 측만증, 거북목 교정</span>
+    </div>
+    <div className="flex items-center space-x-2">
+      <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
+      <span className="text-lg text-gray-600">어깨 충돌증후군 치료</span>
+    </div>
+    <div className="flex items-center space-x-2">
+      <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
+      <span className="text-lg text-gray-600">골반 불균형 교정</span>
+    </div>
+  </div>
 
                       <div className="flex items-center justify-between mt-4 pt-3 border-t border-gray-200">
                         <span className="text-xs text-gray-500">1:1 전담 치료</span>
@@ -160,40 +148,30 @@ export default function HaedongHospital() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                   <div className="absolute top-6 left-6">
-                    <div className="w-8 h-8 bg-amber-500 rounded-lg flex items-center justify-center mb-3">
-                      <span className="text-white font-bold">#</span>
-                    </div>
-                    <h3 className="text-2xl font-bold text-white drop-shadow-lg">여성질환/난임클리닉</h3>
+                  <div className="inline-flex items-center justify-center bg-indigo-800/100 rounded-lg px-3 py-1.5">
+  <h2 className="text-white font-bold"># 여성질환</h2>
+</div>
                   </div>
 
                   {/* Hover overlay with detailed description */}
                   <div className="absolute inset-0 bg-white/95 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-full group-hover:translate-y-0 p-6 flex flex-col justify-center">
                     <div className="space-y-4">
-                      <div className="flex items-center space-x-3 mb-4">
-                        <div className="w-10 h-10 bg-pink-500 rounded-lg flex items-center justify-center">
-                          <span className="text-white font-bold">👩‍⚕️</span>
-                        </div>
-                        <h4 className="font-bold text-pink-600 text-xl">여성 전문 클리닉</h4>
-                      </div>
+                
 
-                      <p className="text-gray-700 text-sm leading-relaxed mb-3">
-                        여성의 생애주기별 건강 관리와 난임 치료를 위한 전문적이고 체계적인 진료를 제공합니다.
-                      </p>
-
-                      <div className="space-y-2">
-                        <div className="flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
-                          <span className="text-sm text-gray-600">월경불순, 생리통 치료</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
-                          <span className="text-sm text-gray-600">난임 검사 및 치료</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
-                          <span className="text-sm text-gray-600">갱년기 관리 프로그램</span>
-                        </div>
-                      </div>
+                    <div className="space-y-2">
+          <div className="flex items-center space-x-2">
+            <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
+            <span className="text-lg text-gray-600">월경불순, 생리통 치료</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
+            <span className="text-lg text-gray-600">난임 검사 및 치료</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
+            <span className="text-lg text-gray-600">갱년기 관리 프로그램</span>
+          </div>
+        </div>
 
                       <div className="flex items-center justify-between mt-4 pt-3 border-t border-gray-200">
                         <span className="text-xs text-gray-500">여성 전담 의료진</span>
@@ -222,44 +200,30 @@ export default function HaedongHospital() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                   <div className="absolute top-6 left-6">
-                    <div className="w-8 h-8 bg-amber-500 rounded-lg flex items-center justify-center mb-3">
-                      <span className="text-white font-bold">#</span>
+                    <div className="inline-flex items-center justify-center bg-indigo-800/100 rounded-lg px-3 py-1.5">
+                      <h2 className="text-white font-bold"># 근로복지공단 산재지정병원</h2>
                     </div>
-                    <h3 className="text-2xl font-bold text-white drop-shadow-lg">
-                      근로복지공단
-                      <br />
-                      산재지정병원
-                    </h3>
                   </div>
 
                   {/* Hover overlay with detailed description */}
                   <div className="absolute inset-0 bg-white/95 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-full group-hover:translate-y-0 p-6 flex flex-col justify-center">
                     <div className="space-y-4">
-                      <div className="flex items-center space-x-3 mb-4">
-                        <div className="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center">
-                          <span className="text-white font-bold">🏭</span>
-                        </div>
-                        <h4 className="font-bold text-green-600 text-xl">산재 전문 치료</h4>
-                      </div>
+                   
 
-                      <p className="text-gray-700 text-sm leading-relaxed mb-3">
-                        근로복지공단 지정 산재병원으로 업무상 재해로 인한 질병과 부상을 전문적으로 치료합니다.
-                      </p>
-
-                      <div className="space-y-2">
-                        <div className="flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                          <span className="text-sm text-gray-600">산업재해 치료 (본인부담금 0원)</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                          <span className="text-sm text-gray-600">직업병 진단 및 치료</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                          <span className="text-sm text-gray-600">재활치료 및 사회복귀 지원</span>
-                        </div>
-                      </div>
+                    <div className="space-y-2">
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+              <span className="text-lg text-gray-600">산업재해 치료</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+              <span className="text-lg text-gray-600">직업병 진단 및 치료</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+              <span className="text-lg text-gray-600">재활치료 및 사회복귀 지원</span>
+            </div>
+          </div>
 
                       <div className="flex items-center justify-between mt-4 pt-3 border-t border-gray-200">
                         <span className="text-xs text-gray-500">공단 지정병원</span>

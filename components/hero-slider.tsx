@@ -9,9 +9,9 @@ import { Badge } from "@/components/ui/badge"
 const heroSlides = [
   {
     id: 1,
-    title: "건강한 삶을 위한",
-    subtitle: "최고의 의료서비스",
-    description: "해동병원은 환자 중심의 진료와 최신 의료 기술로 지역사회의 건강을 책임지는 종합병원입니다.",
+    title: "풍부한 경험과 검증된 진료로",
+    subtitle: "건강을 지켜드립니다.",
+
     image: "/main1.jpg",
     badge: "신뢰받는 의료진",
     primaryButton: "진료 예약하기",
@@ -20,7 +20,7 @@ const heroSlides = [
     id: 2,
     title: "첨단 의료장비로",
     subtitle: "정확한 진단과 치료",
-    description: "안전하고 정확한 의료서비스를 받으세요.",
+
     image: "/main3.jpg",
     badge: "최신 의료장비",
     primaryButton: "시설 둘러보기",
@@ -29,7 +29,7 @@ const heroSlides = [
     id: 3,
     title: "편안하고 안전한",
     subtitle: "치료 환경",
-    description: "깨끗하고 쾌적한 치료실에서 편안한 마음으로 치료받을 수 있는 최적의 환경을 제공합니다.",
+
     image: "/main2.jpg",
     badge: "편안한 치료실",
     primaryButton: "치료실 둘러보기",
@@ -84,55 +84,55 @@ export default function HeroSlider() {
         ))}
       </div>
 
-      {/* Dark Overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/40" />
+          {/* Dark Overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/20" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/20 pointer-events-none" />
 
       {/* Content Overlay */}
       <div className="relative z-10 h-full flex items-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="text-center lg:text-left max-w-3xl mx-auto lg:mx-0">
-            <Badge className="mb-4 bg-white/20 text-white border-white/30 hover:bg-white/30 transition-all duration-500 backdrop-blur-sm">
-              {currentSlideData.badge}
-            </Badge>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div className="relative text-center lg:text-left max-w-3xl mx-auto lg:mx-0 mt-70 md:mt-74 lg:mt-70">
+      <Badge
+  className="absolute -top-6 left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0
+             bg-gray-700/60 text-white border border-white/40
+             backdrop-blur-md rounded-full shadow-md
+             px-3.5 py-1.5 text-sm"
+>
+  {currentSlideData.badge}
+</Badge>
+<br></br>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 transition-all duration-500 leading-tight">
-              {currentSlideData.title}
-              <span className="text-blue-300 block">{currentSlideData.subtitle}</span>
-            </h1>
-
-            <p className="text-xl sm:text-2xl text-white/90 mb-8 leading-relaxed transition-all duration-500 max-w-2xl mx-auto lg:mx-0">
-              {currentSlideData.description}
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center lg:justify-start">
-              <Button
-                size="lg"
-                className="bg-blue-600 hover:bg-blue-700 transition-all duration-300 text-lg px-8 py-4 h-auto"
-              >
-                {currentSlideData.primaryButton}
-              </Button>
+            <div className="inline-block bg-gray-700/60 text-white border border-white/40 backdrop-blur-md rounded-2xl px-6 py-5 shadow-lg">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-0 transition-all duration-500 leading-tight drop-shadow-md">
+                {currentSlideData.title}
+                <span className="text-blue-200 drop-shadow-md block">{currentSlideData.subtitle}</span>
+              </h1>
             </div>
+       
 
-            {/* Slide Controls */}
-            <div className="flex items-center justify-center lg:justify-start space-x-6">
-              <div className="flex space-x-3">
-                <Button
-                  variant="outline"
-                  size="icon"
-                  onClick={prevSlide}
-                  className="rounded-full bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm w-12 h-12"
-                >
-                  <ChevronLeft className="w-5 h-5" />
-                </Button>
-                <Button
-                  variant="outline"
-                  size="icon"
-                  onClick={nextSlide}
-                  className="rounded-full bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm w-12 h-12"
-                >
-                  <ChevronRight className="w-5 h-5" />
-                </Button>
-              </div>
+        
+
+
+    {/* Slide Controls */}
+    <div className="hidden">
+      <div className="flex space-x-3">
+        <Button
+          variant="outline"
+          size="icon"
+          onClick={prevSlide}
+          className="rounded-full bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm w-12 h-12"
+        >
+          <ChevronLeft className="w-5 h-5" />
+        </Button>
+        <Button
+          variant="outline"
+          size="icon"
+          onClick={nextSlide}
+          className="rounded-full bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm w-12 h-12"
+        >
+          <ChevronRight className="w-5 h-5" />
+        </Button>
+      </div>
 
               {/* Slide Indicators */}
               <div className="flex space-x-3">
@@ -189,33 +189,8 @@ export default function HeroSlider() {
         />
       </div>
 
-      {/* Mobile Stats Card */}
-      <div className="absolute bottom-20 left-4 right-4 bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-lg transition-all duration-500 lg:hidden">
-        <div className="flex items-center justify-center space-x-3">
-          <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-            <div className="w-5 h-5 text-green-600">
-              {currentSlide === 0 && "🏥"}
-              {currentSlide === 1 && "🔬"}
-              {currentSlide === 2 && "🚑"}
-              {currentSlide === 3 && "👨‍⚕️"}
-            </div>
-          </div>
-          <div className="text-center">
-            <p className="font-semibold text-gray-900 text-sm">
-              {currentSlide === 0 && "인증받은 의료기관"}
-              {currentSlide === 1 && "첨단 의료장비"}
-              {currentSlide === 2 && "24시간 응급실"}
-              {currentSlide === 3 && "전문 의료진"}
-            </p>
-            <p className="text-xs text-gray-600">
-              {currentSlide === 0 && "보건복지부 인증"}
-              {currentSlide === 1 && "최신 장비 보유"}
-              {currentSlide === 2 && "연중무휴 운영"}
-              {currentSlide === 3 && "50+ 전문의"}
-            </p>
-          </div>
-        </div>
-      </div>
+     
+    
     </section>
   )
 }
