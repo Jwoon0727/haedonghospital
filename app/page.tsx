@@ -85,7 +85,12 @@ export default function HaedongHospital() {
             {/* Right Cards */}
             <div className="space-y-6 md:space-y-6 flex md:block overflow-x-auto md:overflow-visible snap-x snap-mandatory gap-4 pb-2 -mx-4 px-4">
               {/* Card 1 - 도수치료안내 */}
-              <div className="min-w-[85%] md:min-w-0 snap-center group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <div
+  className="min-w-[85%] md:min-w-0 snap-center group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer"
+  tabIndex={0}
+  role="button"
+  aria-label="도수치료 상세 보기"
+>
                 <div className="relative h-64 bg-gradient-to-br from-orange-100 to-orange-200">
                   <Image
                     src="/도수수.avif"
@@ -93,7 +98,7 @@ export default function HaedongHospital() {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                      <div className="absolute inset-0 bg-white/95 backdrop-blur-sm opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 group-active:opacity-100 transition-all duration-300 transform translate-y-full group-hover:translate-y-0 group-focus-within:translate-y-0 group-active:translate-y-0 p-6 flex flex-col justify-center"></div>
                   <div className="absolute top-6 left-6">
                     <div className="inline-flex items-center justify-center bg-indigo-800/100 rounded-lg px-3 py-1.5">
                       <h2 className="text-white font-bold"># 도수치료</h2>

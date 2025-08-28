@@ -62,7 +62,7 @@ export default function HeroSlider() {
   const currentSlideData = heroSlides[currentSlide]
 
   return (
-    <section className="relative h-screen min-h-[600px] max-h-[800px] overflow-hidden">
+    <section className="relative h-[70vh] sm:h-[80vh] md:h-screen min-h-[420px] md:min-h-[600px] md:max-h-[800px] overflow-hidden">
       {/* Background Images */}
       <div className="absolute inset-0">
         {heroSlides.map((slide, index) => (
@@ -102,7 +102,7 @@ export default function HeroSlider() {
 </Badge>
 <br></br>
 
-            <div className="inline-block bg-white-700/60 text-white border border-white/80 backdrop-blur-md rounded-2xl px-6 py-5 shadow-lg">
+            <div className="inline-block bg-white-700/60 text-white  backdrop-blur-md rounded-2xl px-6 py-5 shadow-lg">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-0 transition-all duration-500 leading-tight drop-shadow-md">
                 {currentSlideData.title}
                 <span className="text-blue-300 drop-shadow-md block">{currentSlideData.subtitle}</span>
