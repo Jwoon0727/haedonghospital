@@ -18,7 +18,7 @@ const heroSlides = [
   },
   {
     id: 2,
-    title: "첨단 의료장비로",
+    title: "최신 의료장비로",
     subtitle: "정확한 진단과 치료",
 
     image: "/main3.jpg",
@@ -27,7 +27,7 @@ const heroSlides = [
   },
   {
     id: 3,
-    title: "편안하고 안전한",
+    title: "편안한",
     subtitle: "치료 환경",
 
     image: "/main2.jpg",
@@ -85,15 +85,15 @@ export default function HeroSlider() {
       </div>
 
           {/* Dark Overlay for better text readability */}
-          <div className="absolute inset-0 bg-black/20" />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/20 pointer-events-none" />
+          <div className="absolute inset-0 bg-black/10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/20 pointer-events-none" />
 
       {/* Content Overlay */}
       <div className="relative z-10 h-full flex items-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-      <div className="relative text-center lg:text-left max-w-3xl mx-auto lg:mx-0 mt-70 md:mt-74 lg:mt-70">
+      <div className="relative text-left max-w-3xl mx-auto lg:mx-0 mt-70 md:mt-74 lg:mt-70">
       <Badge
-  className="absolute -top-6 left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0
+  className="absolute -top-6 left-0
              bg-gray-700/60 text-white border border-white/40
              backdrop-blur-md rounded-full shadow-md
              px-3.5 py-1.5 text-sm"
@@ -102,10 +102,10 @@ export default function HeroSlider() {
 </Badge>
 <br></br>
 
-            <div className="inline-block bg-gray-700/60 text-white border border-white/40 backdrop-blur-md rounded-2xl px-6 py-5 shadow-lg">
+            <div className="inline-block bg-white-700/60 text-white border border-white/80 backdrop-blur-md rounded-2xl px-6 py-5 shadow-lg">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-0 transition-all duration-500 leading-tight drop-shadow-md">
                 {currentSlideData.title}
-                <span className="text-blue-200 drop-shadow-md block">{currentSlideData.subtitle}</span>
+                <span className="text-blue-300 drop-shadow-md block">{currentSlideData.subtitle}</span>
               </h1>
             </div>
        

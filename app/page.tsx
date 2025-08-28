@@ -83,9 +83,9 @@ export default function HaedongHospital() {
             </div>
 
             {/* Right Cards */}
-            <div className="space-y-6">
+            <div className="space-y-6 md:space-y-6 flex md:block overflow-x-auto md:overflow-visible snap-x snap-mandatory gap-4 pb-2 -mx-4 px-4">
               {/* Card 1 - 도수치료안내 */}
-              <div className="group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="min-w-[85%] md:min-w-0 snap-center group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="relative h-64 bg-gradient-to-br from-orange-100 to-orange-200">
                   <Image
                     src="/도수수.avif"
@@ -138,7 +138,8 @@ export default function HaedongHospital() {
               </div>
 
               {/* Card 2 - 여성질환/난임클리닉 */}
-              <div className="group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                          {/* Card 2 - 여성질환/난임클리닉 */}
+                          <div className="min-w-[85%] md:min-w-0 snap-center group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="relative h-64 bg-gradient-to-br from-blue-100 to-blue-200">
                   <Image
                     src="/여성질환.webp"
@@ -190,7 +191,8 @@ export default function HaedongHospital() {
               </div>
 
               {/* Card 3 - 근로복지공단 산재지정병원 */}
-              <div className="group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                           {/* Card 3 - 근로복지공단 산재지정병원 */}
+                           <div className="min-w-[85%] md:min-w-0 snap-center group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="relative h-64 bg-gradient-to-br from-green-100 to-green-200">
                   <Image
                     src="/의사.png"
