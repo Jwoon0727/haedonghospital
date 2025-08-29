@@ -10,6 +10,7 @@ import AnimatedServiceCard from "@/components/animated-service-card"
 import HeaderComponent from "@/components/header"
 import ConsultationFormComponent from "@/components/consultation-form"
 import dynamic from "next/dynamic"
+import { useState } from "react"
 
 // 카카오맵 컴포넌트를 동적으로 불러오기
 const KakaoMap = dynamic(() => import('@/utils/kakaomap'), {
@@ -23,6 +24,7 @@ const KakaoMap = dynamic(() => import('@/utils/kakaomap'), {
 
 
 export default function HaedongHospital() {
+  const [activeCard, setActiveCard] = useState<number | null>(null)
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -86,11 +88,9 @@ export default function HaedongHospital() {
             <div className="space-y-6 md:space-y-6 flex md:block overflow-x-auto md:overflow-visible snap-x snap-mandatory gap-4 pb-2 -mx-4 px-4">
               {/* Card 1 - 도수치료안내 */}
               <div
-  className="min-w-[85%] md:min-w-0 snap-center group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer"
-  tabIndex={0}
-  role="button"
-  aria-label="도수치료 상세 보기"
->
+                onClick={() => setActiveCard(activeCard === 1 ? null : 1)}
+                className="min-w-[85%] md:min-w-0 snap-center relative overflow-hidden rounded-3xl shadow-lg transition-all duration-300 cursor-pointer"
+              >
                 <div className="relative h-64 bg-gradient-to-br from-orange-100 to-orange-200">
                   <Image
                     src="/도수수.avif"
@@ -98,15 +98,18 @@ export default function HaedongHospital() {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                      <div className="absolute inset-0 bg-white/95 backdrop-blur-sm opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 group-active:opacity-100 transition-all duration-300 transform translate-y-full group-hover:translate-y-0 group-focus-within:translate-y-0 group-active:translate-y-0 p-6 flex flex-col justify-center"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                   <div className="absolute top-6 left-6">
                     <div className="inline-flex items-center justify-center bg-indigo-800/100 rounded-lg px-3 py-1.5">
                       <h2 className="text-white font-bold"># 도수치료</h2>
                     </div>
                   </div>
 
-                  {/* Hover overlay with detailed description */}
-                  <div className="absolute inset-0 bg-white/95 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-full group-hover:translate-y-0 p-6 flex flex-col justify-center">
+                  {/* 클릭 토글 오버레이 (hover 제거) */}
+                  <div
+                    className={`absolute inset-0 bg-white/95 backdrop-blur-sm transition-all duration-300 p-6 flex flex-col justify-center
+                      ${activeCard === 1 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-full'}`}
+                  >
                     <div className="space-y-4">
                  
 
@@ -144,7 +147,7 @@ export default function HaedongHospital() {
 
               {/* Card 2 - 여성질환/난임클리닉 */}
                           {/* Card 2 - 여성질환/난임클리닉 */}
-                          <div className="min-w-[85%] md:min-w-0 snap-center group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                          <div onClick={() => setActiveCard(activeCard === 2 ? null : 2)} className="min-w-[85%] md:min-w-0 snap-center relative overflow-hidden rounded-3xl shadow-lg transition-all duration-300 cursor-pointer">
                 <div className="relative h-64 bg-gradient-to-br from-blue-100 to-blue-200">
                   <Image
                     src="/여성질환.webp"
@@ -160,7 +163,10 @@ export default function HaedongHospital() {
                   </div>
 
                   {/* Hover overlay with detailed description */}
-                  <div className="absolute inset-0 bg-white/95 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-full group-hover:translate-y-0 p-6 flex flex-col justify-center">
+                  <div
+                    className={`absolute inset-0 bg-white/95 backdrop-blur-sm transition-all duration-300 p-6 flex flex-col justify-center
+                      ${activeCard === 2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-full'}`}
+                  >
                     <div className="space-y-4">
                 
 
@@ -197,7 +203,7 @@ export default function HaedongHospital() {
 
               {/* Card 3 - 근로복지공단 산재지정병원 */}
                            {/* Card 3 - 근로복지공단 산재지정병원 */}
-                           <div className="min-w-[85%] md:min-w-0 snap-center group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                           <div onClick={() => setActiveCard(activeCard === 3 ? null : 3)} className="min-w-[85%] md:min-w-0 snap-center relative overflow-hidden rounded-3xl shadow-lg transition-all duration-300 cursor-pointer">
                 <div className="relative h-64 bg-gradient-to-br from-green-100 to-green-200">
                   <Image
                     src="/의사.png"
@@ -213,7 +219,10 @@ export default function HaedongHospital() {
                   </div>
 
                   {/* Hover overlay with detailed description */}
-                  <div className="absolute inset-0 bg-white/95 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-full group-hover:translate-y-0 p-6 flex flex-col justify-center">
+                  <div
+                    className={`absolute inset-0 bg-white/95 backdrop-blur-sm transition-all duration-300 p-6 flex flex-col justify-center
+                      ${activeCard === 3 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-full'}`}
+                  >
                     <div className="space-y-4">
                    
 
@@ -257,18 +266,18 @@ export default function HaedongHospital() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">병원장 인사말</h2>
-            <p className="text-xl text-gray-600">해동병원을 이끌어가는 의료진을 소개합니다.</p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-1 lg:order-1">
-              <div className="relative">
+              <div className="relative w-56 sm:w-64 md:w-[400px] mx-auto">
                 <Image
                   src="/person.jpg"
                   alt="김해동 병원장"
-                  width={500}
-                  height={600}
-                  className="rounded-2xl shadow-2xl"
+                  width={400}
+                  height={500}
+                  className="w-full h-auto rounded-2xl shadow-2xl"
+                  sizes="(max-width: 768px) 60vw, 400px"
                 />
                 <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg">
                   <div className="text-center">
@@ -281,75 +290,81 @@ export default function HaedongHospital() {
 
             <div className="order-2 lg:order-2">
               <div className="space-y-6">
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">이상돈 병원장</h3>
-                </div>
+                {/* <div>
+                  <h3 className=" font-bold text-gray-900 mb-2">HAEDONG HOSPITAL</h3>
+                </div> */}
 
-                <div className="prose prose-lg text-gray-600">
-                  <p className="leading-relaxed text-xl font-bold">안녕하세요.</p>
-                  <p className="leading-relaxed px-3 py-1 rounded text-xl font-bold">
-                    의정부 민락2지구에 해동한방병원을<br />
-                    개원하게 된 병원장 이상돈입니다.
-                  </p>
-                  <p className="leading-relaxed">
-                  저희 해동한방병원은 다년간의 다양한 경험과 노하우를 가지고
-의정부지역에서 새로운 출발을 하려 합니다.
-지역주민들과 융화되어 함께 만들어가는 양·한방 병원이 되고자 노력하겠습니다.
-양·한방 협진이 이루어지는 해동한방병원에서는
-한의과의 전통적인 치료와 양방협진으로 동시에 치료를 받으실 수 있으며,
-친절한 상담과 정성스러운 진료를 통해 환자 여러분들의 마음까지
-편안함을 느끼실 수 있을 것입니다. <br></br>감사합니다.
-                  </p>
+                <div className="prose prose-lg text-gray-600 space-y-4">
+  <p className="text-2xl font-bold text-[#0A1A44] leading-tight">안녕하세요.</p>
+
+  <p className="text-xl font-semibold leading-snug">
+    의정부 <span className="text-[#0A1A44] font-bold">민락2지구</span>에
+    <span className="text-[#001F3F] font-extrabold text-3xl"> 해동한방병원</span>을 개원하게 된 <br/> 병원장
+    <span className="text-[#0A1A44] font-bold text-2xl"> 이상돈</span>입니다.
+  </p>
+
+  <div className="w-10 h-1 bg-[#0A1A44] rounded-full"></div>
+
+  <p className="text-base text-gray-700 leading-8">
+    저희 해동한방병원은 다년간의 다양한 경험과 노하우를 가지고 의정부지역에서 새로운 출발을 하려 합니다.
+    <br/>지역주민들과 융화되어 함께 만들어가는 <span className="text-[#0A1A44] font-bold">양·한방 병원</span>이 되고자 노력하겠습니다.
+  </p>
+
+
+  <p className="text-base text-gray-700 leading-8">
+    양·한방 협진이 이루어지는 해동한방병원에서는 한의과의 전통적인 치료와 양방협진으로 동시에 치료를 받으실 수 있으며, 친절한 상담과 정성스러운 진료를 통해 환자 여러분들의 마음까지 편안함을 느끼실 수 있을 것입니다.
+  </p>
+
+  <p className="text-base text-gray-700 leading-8">감사합니다.</p>
+
                   
                   {/* Vision Section */}
                   <div className="flex items-center space-x-4 my-6">
-                    <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-500 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <div className="w-12 h-12 bg-[#0A1A44] rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
                       <Trophy className="w-6 h-6 text-white" />
                     </div>
                     <div className="flex-1">
-                      <span className="text-amber-600 font-bold text-lg">비전</span>
+                      <span className="text-[#0A1A44] font-bold text-lg">비전</span>
                       <div className="ml-4 mt-2">
-                        <div className="bg-gradient-to-r from-amber-500 to-orange-500 text-white px-6 py-3 rounded-full inline-block shadow-lg">
-                          <span className="font-semibold">한/양방의 협진을 통한 비수술적 자연치유를 지향하는 병원</span>
+                        <div className="bg-[#0A1A44] text-white px-5 py-2 rounded-full inline-block shadow-lg">
+                          <span className="font-semibold">양·한방 협진, 비수술 중심 치료</span>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl shadow-lg border border-blue-100">
-                  <div className="flex items-center space-x-3 mb-6">
-                    <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
-                      <Target className="w-5 h-5 text-white" />
+                  {/* Mission (간단/네이비 톤) */}
+                  <div className="flex items-center space-x-4 my-6">
+                    <div className="w-12 h-12 bg-[#fff] rounded-full flex items-center justify-center flex-shrink-0 ">
+                      <div className="w-6 h-6 text-white" />
                     </div>
-                    <h4 className="text-xl font-bold text-gray-900">미션</h4>
+                    <div className="flex-1">
+                      <span className="text-[#0A1A44] font-bold text-lg">미션</span>
+                      <div className="ml-4 mt-2">
+                      <ul className="space-y-3 text-[#0A1A44]">
+                      <li className="flex items-start space-x-3 p-3 bg-white/60 rounded-xl">
+                        <div className="w-2 h-2 rounded-full bg-[#0A1A44] mt-2" />
+                        <span className="font-medium">환자 중심의 맞춤 진료</span>
+                      </li>
+                      <li className="flex items-start space-x-3 p-3 bg-white/60 rounded-xl">
+                        <div className="w-2 h-2 rounded-full bg-[#0A1A44] mt-2" />
+                        <span className="font-medium">친절·정직한 의료 서비스</span>
+                      </li>
+                      <li className="flex items-start space-x-3 p-3 bg-white/60 rounded-xl">
+                        <div className="w-2 h-2 rounded-full bg-[#0A1A44] mt-2" />
+                        <span className="font-medium">지속적인 회복과 삶의 질 향상</span>
+                      </li>
+                    </ul>
+                      </div>
+                    </div>
                   </div>
-                  <ul className="space-y-4 text-gray-700">
-                    <li className="flex items-start space-x-4 p-3 bg-white/60 rounded-xl backdrop-blur-sm">
-                      <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                        <Heart className="w-4 h-4 text-blue-600" />
-                      </div>
-                      <span className="font-medium">환자 중심의 인술을 베푸는 의료진</span>
-                    </li>
-                    <li className="flex items-start space-x-4 p-3 bg-white/60 rounded-xl backdrop-blur-sm">
-                      <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                        <Users className="w-4 h-4 text-green-600" />
-                      </div>
-                      <span className="font-medium">사랑으로 친절하게 봉사하는 직원</span>
-                    </li>
-                    <li className="flex items-start space-x-4 p-3 bg-white/60 rounded-xl backdrop-blur-sm">
-                      <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                        <Home className="w-4 h-4 text-purple-600" />
-                      </div>
-                      <span className="font-medium">환자를 나의 가족이라고 생각하는 병원</span>
-                    </li>
-                  </ul>
-                </div>
+                  </div>
+
                 <div className="flex flex-wrap gap-3">
                   <Badge variant="secondary" className="bg-blue-100 text-blue-800 px-4 py-2 text-sm font-medium rounded-full">
                     한국&미국 한의 라인센스 보유
                   </Badge>
-                  <Badge variant="secondary" className="bg-green-100 text-green-800 px-4 py-2 text-sm font-medium rounded-full">
+                  <Badge variant="secondary" className="bg-blue-800 text-white px-4 py-2 text-sm font-medium rounded-full">
                     선친의 대를 이은 한의사
                   </Badge>
                 </div>

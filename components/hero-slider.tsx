@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge"
 const heroSlides = [
   {
     id: 1,
-    title: "풍부한 경험과 검증된 진료로",
+    title: "검증된 진료로",
     subtitle: "건강을 지켜드립니다.",
 
     image: "/main1.jpg",
