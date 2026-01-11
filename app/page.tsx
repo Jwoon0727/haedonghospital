@@ -72,7 +72,7 @@ export default function HaedongHospital() {
                     <br />
                     진료과목을
                     <br />
-                    소개합니다.
+                    소개합니다
                   </h2>
                 </div>
 
